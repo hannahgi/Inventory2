@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/product" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <EditText
+                android:id="@+id/product_name"
+                style="@style/EditFieldStyle"
+                android:hint="@string/name"
+                android:inputType="textCapWords" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp">
+
+                <EditText
+                    android:id="@+id/product_price"
+                    style="@style/EditFieldStyle"
+                    android:hint="@string/price"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/currency"
+                    style="@style/currencyStyle"
+                    android:text="@string/currency" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="4dp">
+
+                <Button
+                    android:id="@+id/minus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/minus" />
+
+                <EditText
+                    android:id="@+id/product_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:hint="@string/quantity"
+                    android:inputType="number"
+                    android:maxLength="5" />
+
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/supplier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/supplier_name"
+                style="@style/EditFieldStyle"
+                android:hint="@string/name"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/phone_number"
+                style="@style/EditFieldStyle"
+                android:layout_below="@+id/supplier_name"
+                android:hint="@string/phone_number"
+                android:maxLength="8"
+                android:inputType="phone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/call_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        android:text="@string/contact_us" />
+</LinearLayout>
